@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sudoku.puzzle.solver.ui.prototype.pkg1;
+import java.lang.String;
+/**
+ *
+ * @author luskeyg
+ */
+
+public class Board {
+    //redundant arrays assorted differently
+    private Cell[][] Columns = new Cell[Prototype.size][Prototype.size];
+    private Cell[][] Rows = new Cell[Prototype.size][Prototype.size];
+    private Cell[][] Boxs = new Cell[Prototype.size][Prototype.size]; //3x3 squares
+    //TODO use this as output file or just return a string of the data
+    private String file;
+    
+    //board constructor; Gets the string generated from board or from file
+    public Board(String input) throws Exception{
+        //throws exeption if the input string does not fill or fills too many cells on the board
+        if(input.length() != Prototype.size*Prototype.size){
+            throw new Exception("Input Error");
+        }
+        for(int i = 1; i <= Prototype.size; i++){
+            for(int j = 1; j <= Prototype.size; i++){
+                //go through each of the characters in the string; i*j is the length times width of the current cell.
+                switch(input.charAt(i*j)){
+                    case '0':
+                        //do nothing. 0 means a null or blank space in the board.
+                    default:
+                        //gets the numaric value off the current string index and sets the cell to that
+                        //TODO chech if the char is a numeric and between 1-9
+                        Rows[i][j].Set(Character.getNumericValue(input.charAt(i*j)));
+                }
+            }
+        }
+    }
+    
+}

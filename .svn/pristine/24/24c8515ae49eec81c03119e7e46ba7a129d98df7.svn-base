@@ -1,0 +1,774 @@
+I-Logix-RPY-Archive version 8.7.1 Java 5066837
+{ ISubsystem 
+	- _id = GUID 1143f347-ae49-425b-8bad-438bdf37a3e7;
+	- _myState = 8192;
+	- _name = "Default";
+	- _lastID = 14;
+	- weakCGTime = 3.9.2017::21:28:43;
+	- strongCGTime = 1.2.1990::0:0:0;
+	- _defaultComposite = GUID a8ba9377-402a-4bb6-b548-c8dba2914ddf;
+	- _eventsBaseID = -1;
+	- Classes = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IClass 
+			- _id = GUID a8ba9377-402a-4bb6-b548-c8dba2914ddf;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- weakCGTime = 2.21.2017::17:20:10;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 73b23638-6b55-4f60-b231-57e0d7d728fa;
+			- _myState = 10240;
+			- _name = "class_5";
+			- weakCGTime = 2.21.2017::17:20:25;
+			- strongCGTime = 2.21.2017::17:20:10;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- UseCases = { IRPYRawContainer 
+		- size = 9;
+		- value = 
+		{ IUseCase 
+			- _id = GUID 9dca4381-ac5d-4472-9671-a86ef0731d47;
+			- _myState = 10240;
+			- _name = "usecase_1";
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+			- _myState = 8192;
+			- _name = "Cancel Appointment";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID 09888636-19e0-4327-9e56-e1466498139f;
+					- _myState = 2048;
+					- _name = "Doctor";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "extend";
+							- _id = GUID 17ef9a30-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+				}
+				{ IDependency 
+					- _id = GUID 86da3b29-7105-4a94-a161-4fd91e47a936;
+					- _myState = 2048;
+					- _name = "Doctor_0";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "include";
+							- _id = GUID 17ef9a2f-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+				}
+			}
+			- _lastID = 3;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IInformationFlow 
+					- _id = GUID 35957942-90dd-49d4-bf74-e320a1eb003e;
+					- _myState = 2048;
+					- _name = "Cancel Appointment_Doctor";
+					- end1_ = { IHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- end2_ = { IHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- direction_ = toEnd2;
+				}
+			}
+			- weakCGTime = 2.21.2017::17:34:27;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 5;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID c7d1de34-0c3a-4d61-a0ae-80a9a9245cd1;
+					- _myState = 10240;
+					- _name = "itsDoctor";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 86d2dd50-dd80-4d87-a3da-4ce6d410e90e;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 27baa503-30c9-4f1d-be51-1bec8abaa208;
+					- _myState = 10240;
+					- _name = "itsDoctor_1";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID caa57e85-6c25-44d5-aa5f-acb4533aacdc;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 74c26871-8d33-40c6-9609-26cf8ba6fc83;
+					- _myState = 10240;
+					- _name = "itsDoctor_2";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID e58a322b-5015-434a-8615-43f5f27c444d;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID a3efb7f7-e675-4c87-8060-26a3a58b0fea;
+					- _myState = 10240;
+					- _name = "itsDoctor_3";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID bc08c8d0-681f-4ecf-abf2-1c0a44b7e5c7;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID c8bc782e-c73b-465a-819c-710f0a3df56b;
+					- _myState = 10240;
+					- _name = "itsDoctor_4";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 9f6df60b-6bac-46e5-afea-35145f4b1852;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID 9721c87d-530f-4c13-ae24-59dcd6b8e977;
+			- _myState = 8192;
+			- _name = "Make Appointment";
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 3604693f-aa9a-466a-bf4e-c2a712acee01;
+					- _myState = 10240;
+					- _name = "itsDoctor";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 736fc744-2783-4d0d-9ab9-644329d3cfb5;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 396fa391-3cfc-475b-9369-0522008d0fda;
+					- _myState = 10240;
+					- _name = "itsDoctor_1";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 3d1f4b68-de1a-467d-8ec4-1f8cc980707e;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID f9d7f931-4727-425c-b457-a72d691f5ed4;
+			- _myState = 10240;
+			- _name = "usecase_4";
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID 936283e7-ec6d-4d47-af53-d0a92774f2da;
+			- _myState = 8192;
+			- _name = "Enter Board";
+			- _lastID = 1;
+			- Declaratives = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IInformationFlow 
+					- _id = GUID eb8f09ef-a3bc-4bbe-96d7-dc89f3552dfc;
+					- _myState = 2048;
+					- _name = "Enter Board_Player";
+					- end1_ = { IHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 936283e7-ec6d-4d47-af53-d0a92774f2da;
+					}
+					- end2_ = { IHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 01457a13-7dfd-4ba4-9903-2105507d40ca;
+					}
+					- direction_ = toEnd2;
+				}
+			}
+			- weakCGTime = 12.31.1969::18:0:0;
+			- strongCGTime = 12.31.1969::18:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 72f2c141-c8bb-4e28-85d6-c166b06e4a1e;
+					- _myState = 10240;
+					- _name = "itsPlayer";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 01457a13-7dfd-4ba4-9903-2105507d40ca;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID ec832857-8a7e-450d-9a15-00c0b6063660;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+			- UseCaseStereoTypes = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID 623e0e9d-d02c-4394-8b14-d833ab8e6cbb;
+			- _myState = 8192;
+			- _name = "View Board";
+			- weakCGTime = 12.31.1969::18:0:0;
+			- strongCGTime = 12.31.1969::18:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 1ef7b7b1-0598-458f-81e1-7b43913a68ee;
+					- _myState = 10240;
+					- _name = "itsPlayer";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 01457a13-7dfd-4ba4-9903-2105507d40ca;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID ba0288d9-0f5e-4bbd-9978-16a5f1311f7d;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+			- UseCaseStereoTypes = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID f9f7f148-222b-461f-9838-51e01592fb20;
+			- _myState = 8192;
+			- _name = "View Solved Board";
+			- weakCGTime = 12.31.1969::18:0:0;
+			- strongCGTime = 12.31.1969::18:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 6899f689-8d8f-4435-99f5-82793b19d24a;
+					- _myState = 10240;
+					- _name = "itsPlayer";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IActor";
+						- _id = GUID 01457a13-7dfd-4ba4-9903-2105507d40ca;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID ca280cd9-418a-4f41-a8f8-a937bc5770b5;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+			- UseCaseStereoTypes = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID d837d9b6-8951-4425-9588-6e52c16bbe9e;
+			- _myState = 10240;
+			- _name = "usecase_11";
+			- weakCGTime = 12.31.1969::18:0:0;
+			- strongCGTime = 12.31.1969::18:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+			- UseCaseStereoTypes = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+		{ IUseCase 
+			- _id = GUID f12dab8a-be8f-4b52-b9b5-e40f9bbfe3bb;
+			- _myState = 10240;
+			- _name = "usecase_13";
+			- weakCGTime = 12.31.1969::18:0:0;
+			- strongCGTime = 12.31.1969::18:0:0;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+			- UseCaseStereoTypes = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _EntryPoints = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+	}
+	- Actors = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ IActor 
+			- _id = GUID 98f6b841-6fad-4466-bdbd-f00abc759a5c;
+			- _myState = 8192;
+			- _name = "Doctor";
+			- Dependencies = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IDependency 
+					- _id = GUID 1d2af3ec-cfc3-47bd-8f53-cd40680330d1;
+					- _myState = 2048;
+					- _name = "Cancel Appointment";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "extend";
+							- _id = GUID 17ef9a30-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+				}
+			}
+			- _lastID = 1;
+			- weakCGTime = 2.21.2017::17:34:10;
+			- strongCGTime = 2.21.2017::17:23:5;
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID 1f694599-67ea-4cb9-995a-38577d59381f;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 7;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID 86d2dd50-dd80-4d87-a3da-4ce6d410e90e;
+					- _myState = 10240;
+					- _name = "itsCancel Appointment_1";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID c7d1de34-0c3a-4d61-a0ae-80a9a9245cd1;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 736fc744-2783-4d0d-9ab9-644329d3cfb5;
+					- _myState = 10240;
+					- _name = "itsMake Appointment";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 9721c87d-530f-4c13-ae24-59dcd6b8e977;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 3604693f-aa9a-466a-bf4e-c2a712acee01;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID caa57e85-6c25-44d5-aa5f-acb4533aacdc;
+					- _myState = 10240;
+					- _name = "itsCancel Appointment";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 27baa503-30c9-4f1d-be51-1bec8abaa208;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID e58a322b-5015-434a-8615-43f5f27c444d;
+					- _myState = 10240;
+					- _name = "itsCancel Appointment_2";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 74c26871-8d33-40c6-9609-26cf8ba6fc83;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 3d1f4b68-de1a-467d-8ec4-1f8cc980707e;
+					- _myState = 10240;
+					- _name = "itsMake Appointment_1";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 9721c87d-530f-4c13-ae24-59dcd6b8e977;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 396fa391-3cfc-475b-9369-0522008d0fda;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID bc08c8d0-681f-4ecf-abf2-1c0a44b7e5c7;
+					- _myState = 10240;
+					- _name = "itsCancel Appointment_3";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID a3efb7f7-e675-4c87-8060-26a3a58b0fea;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID 9f6df60b-6bac-46e5-afea-35145f4b1852;
+					- _myState = 10240;
+					- _name = "itsCancel Appointment_4";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 42ac4f83-a2ad-42a4-82e1-d645034a0523;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID c8bc782e-c73b-465a-819c-710f0a3df56b;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IActor 
+			- _id = GUID 01457a13-7dfd-4ba4-9903-2105507d40ca;
+			- _myState = 8192;
+			- _name = "Player";
+			- Dependencies = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IDependency 
+					- _id = GUID 0274081d-ddef-4046-92c7-58076752e938;
+					- _myState = 2048;
+					- _name = "View Board";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "extend";
+							- _id = GUID 17ef9a30-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 623e0e9d-d02c-4394-8b14-d833ab8e6cbb;
+					}
+				}
+				{ IDependency 
+					- _id = GUID f3948c96-c35e-406c-adc9-925c1a1798ec;
+					- _myState = 2048;
+					- _name = "View Board_0";
+					- Stereotypes = { IRPYRawContainer 
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IStereotype";
+							- _filename = "PredefinedTypes.sbs";
+							- _subsystem = "PredefinedTypes";
+							- _class = "";
+							- _name = "include";
+							- _id = GUID 17ef9a2f-cb89-11d5-b5bf-00d0b780aafd;
+						}
+					}
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 623e0e9d-d02c-4394-8b14-d833ab8e6cbb;
+					}
+				}
+			}
+			- _lastID = 2;
+			- weakCGTime = 3.9.2017::21:26:6;
+			- strongCGTime = 3.9.2017::21:16:54;
+			- Inheritances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IGeneralization 
+					- _id = GUID 2b718d89-e029-4089-8386-e678b6fac971;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 936283e7-ec6d-4d47-af53-d0a92774f2da;
+					}
+					- _inheritanceType = iPublic;
+					- _isVirtual = 0;
+				}
+			}
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 3;
+				- value = 
+				{ IAssociationEnd 
+					- _id = GUID ec832857-8a7e-450d-9a15-00c0b6063660;
+					- _myState = 10240;
+					- _name = "itsEnter Board";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 936283e7-ec6d-4d47-af53-d0a92774f2da;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 72f2c141-c8bb-4e28-85d6-c166b06e4a1e;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID ba0288d9-0f5e-4bbd-9978-16a5f1311f7d;
+					- _myState = 10240;
+					- _name = "itsView Board";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID 623e0e9d-d02c-4394-8b14-d833ab8e6cbb;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 1ef7b7b1-0598-458f-81e1-7b43913a68ee;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+				{ IAssociationEnd 
+					- _id = GUID ca280cd9-418a-4f41-a8f8-a937bc5770b5;
+					- _myState = 10240;
+					- _name = "itsView Solved Board";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IUseCase";
+						- _id = GUID f9f7f148-222b-461f-9838-51e01592fb20;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "IAssociationEnd";
+						- _id = GUID 6899f689-8d8f-4435-99f5-82793b19d24a;
+					}
+					- _linkName = "";
+					- _linkType = Assoc;
+					- _navigability = Navigable;
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- _configurationRelatedTime = 1.2.1990::0:0:0;
+}
+
